@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Train Ticket Booking System</h1>
+        <div id="main-menu">
+            <button onclick="showTrainList()">View Trains</button>
+            <button onclick="showBookingSection()">Book Ticket</button>
+            <button onclick="showMyTickets()">My Tickets</button>
+        </div>
+        
+        <div id="train-list" class="hidden">
+            <h2>Available Trains</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Train Name</th>
+                        <th>Route</th>
+                        <th>Departure Time</th>
+                        <th>Seats Available</th>
+                    </tr>
+                </thead>
+                <tbody id="train-table">
+                    <!-- Trains will be dynamically populated -->
+                </tbody>
+            </table>
+            <button onclick="returnToMainMenu()">Back to Main Menu</button>
+        </div>
+
+        <div id="booking-section" class="hidden">
+            <h2>Book a Ticket</h2>
+            <form id="booking-form">
+                <label for="train-id">Select Train:</label>
+                <select id="train-id"></select>
+                <button type="submit">Book Ticket</button>
+            </form>
+            <button onclick="returnToMainMenu()">Back to Main Menu</button>
+        </div>
+
+        <div id="my-tickets" class="hidden">
+            <h2>My Tickets</h2>
+            <ul id="ticket-list">
+                <!-- Tickets will be dynamically populated -->
+            </ul>
+            <button onclick="returnToMainMenu()">Back to Main Menu</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
